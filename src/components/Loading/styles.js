@@ -10,6 +10,6 @@ const rotate360 = keyframes`
   }
 `;
 
-export const Spinner = styled.img`
+export const Spinner = styled.div`
   animation: ${rotate360} 2s linear infinite;
 `;
