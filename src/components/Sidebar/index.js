@@ -14,10 +14,12 @@ class Sidebar extends Component {
   static propTypes = {
     getPlaylistsRequest: PropTypes.func.isRequired,
     playlists: PropTypes.shape({
-      data: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number,
-        title: PropTypes.string,
-      }))
+      data: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.number,
+          title: PropTypes.string
+        })
+      )
     }).isRequired
   };
 
@@ -31,7 +33,7 @@ class Sidebar extends Component {
         <div>
           <Nav main>
             <li>
-              <a href="https://www.google.com/">Navegar</a>
+              <Link to="/">Navegar</Link>
             </li>
             <li>
               <a href="https://www.google.com/">Rádio</a>
