@@ -107,15 +107,4 @@ export const SongItem = styled.tr`
   }
 `;
 
-export const PlaySongItem = styled.button`
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border: 0;
-  margin: 0 15px;
-  display: none;
-
-  &:hover {
-    display: block !important;
-  }
-`;
+export const Play = styled.td``;

@@ -17,6 +17,8 @@ import {
   ProgressSlider
 } from "./styles";
 
+import PlayAndPauseButton from "../PlayAndPauseButton";
+
 import VolumeIcon from "../../assets/images/volume.svg";
 import ShuffleIcon from "../../assets/images/shuffle.svg";
 import BackwardIcon from "../../assets/images/backward.svg";
@@ -37,7 +39,8 @@ const Player = ({
   handlePosition,
   setPosition,
   positionShown,
-  progress
+  progress,
+  setVolume
 }) => (
   <Container>
     {!!player.currentSong && (
@@ -47,6 +50,7 @@ const Player = ({
         onFinishedPlaying={next}
         onPlaying={playing}
         position={player.position}
+        volume={player.volume}
       />
     )}
     <Current>
@@ -73,15 +77,7 @@ const Player = ({
         <button onClick={prev}>
           <img src={BackwardIcon} alt="Backward" />
         </button>
-        {!!player.currentSong && player.status === Sound.status.PLAYING ? (
-          <button onClick={pause}>
-            <img src={PauseIcon} alt="Play" />
-          </button>
-        ) : (
-          <button onClick={play}>
-            <img src={PlayIcon} alt="Play" />
-          </button>
-        )}
+        <PlayAndPauseButton />
         <button onClick={next}>
           <img src={ForwardIcon} alt="Forward" />
         </button>
@@ -113,7 +109,8 @@ const Player = ({
         railStyle={{ background: "#404040", borderRadius: 10 }}
         trackStyle={{ background: "#fff" }}
         handleStyle={{ display: "none" }}
-        value={100}
+        value={player.volume}
+        onChange={setVolume}
       />
     </Volume>
   </Container>
@@ -139,7 +136,8 @@ Player.propTypes = {
   handlePosition: PropTypes.func.isRequired,
   setPosition: PropTypes.func.isRequired,
   positionShown: PropTypes.string.isRequired,
-  progress: PropTypes.number.isRequired
+  progress: PropTypes.number.isRequired,
+  setVolume: PropTypes.func.isRequired
 };
 
 function msToTime(duration) {

@@ -6,9 +6,10 @@ import { bindActionCreators } from "redux";
 import { Creators as PlaylistDetailsActions } from "../../store/ducks/playlistDetails";
 import { Creators as PlayerActions } from "../../store/ducks/player";
 
-import { Container, Header, SongList, SongItem } from "./styles";
+import { Container, Header, SongList, SongItem, Play } from "./styles";
 
 import Loading from "../../components/Loading";
+import PlayAndPauseButton from "../../components/PlayAndPauseButton";
 
 import ClockIcon from "../../assets/images/clock.svg";
 import PlusIcon from "../../assets/images/plus.svg";
@@ -83,6 +84,7 @@ class Playlist extends Component {
         <SongList cellPadding={0} cellSpacing={0}>
           <thead>
             <th />
+            <th />
             <th>Título</th>
             <th>Artista</th>
             <th>Álbum</th>
@@ -110,6 +112,9 @@ class Playlist extends Component {
                     this.props.currentSong.id === song.id
                   }
                 >
+                  <Play>
+                    {this.props.currentSong === song && <PlayAndPauseButton />}
+                  </Play>
                   <td>
                     <img src={PlusIcon} alt="Adicionar" />
                   </td>
