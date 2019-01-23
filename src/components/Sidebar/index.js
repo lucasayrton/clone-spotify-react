@@ -39,38 +39,38 @@ class Sidebar extends Component {
               <Link to="/">Navegar</Link>
             </li>
             <li>
-              <a href="https://www.google.com/">Rádio</a>
+              <a href="/">Rádio</a>
             </li>
           </Nav>
 
           <Nav>
             <Title>Sua biblioteca</Title>
             <li>
-              <a href="https://www.google.com/">Seu Daily Mix</a>
+              <a href="/">Seu Daily Mix</a>
             </li>
             <li>
-              <a href="https://www.google.com/">Tocados recentemente</a>
+              <a href="/">Tocados recentemente</a>
             </li>
             <li>
-              <a href="https://www.google.com/">Músicas</a>
+              <a href="/">Músicas</a>
             </li>
             <li>
-              <a href="https://www.google.com/">Álbums</a>
+              <a href="/">Álbums</a>
             </li>
             <li>
-              <a href="https://www.google.com/">Artistas</a>
+              <a href="/">Artistas</a>
             </li>
             <li>
-              <a href="https://www.google.com/">Estações</a>
+              <a href="/">Estações</a>
             </li>
             <li>
-              <a href="https://www.google.com/">Arquivos locais</a>
+              <a href="/">Arquivos locais</a>
             </li>
             <li>
-              <a href="https://www.google.com/">Vídoes</a>
+              <a href="/">Vídoes</a>
             </li>
             <li>
-              <a href="https://www.google.com/">Podcasts</a>
+              <a href="/">Podcasts</a>
             </li>
           </Nav>
 
