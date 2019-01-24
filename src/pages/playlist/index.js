@@ -40,7 +40,7 @@ class Playlist extends Component {
     }).isRequired,
     loadSong: PropTypes.func.isRequired,
     currentSong: PropTypes.shape({
-      id: PropTypes
+      id: PropTypes.number
     })
   };
 
