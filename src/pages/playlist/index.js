@@ -18,7 +18,7 @@ class Playlist extends Component {
   static propTypes = {
     match: PropTypes.shape({
       params: PropTypes.shape({
-        id: PropTypes.number
+        id: PropTypes.string
       })
     }).isRequired,
     getPlaylistDetailsRequest: PropTypes.func.isRequired,
@@ -41,7 +41,7 @@ class Playlist extends Component {
     loadSong: PropTypes.func.isRequired,
     currentSong: PropTypes.shape({
       id: PropTypes
-    }).isRequired
+    })
   };
 
   state = {
@@ -83,14 +83,16 @@ class Playlist extends Component {
 
         <SongList cellPadding={0} cellSpacing={0}>
           <thead>
-            <th />
-            <th />
-            <th>Título</th>
-            <th>Artista</th>
-            <th>Álbum</th>
-            <th>
-              <img src={ClockIcon} alt="Duração" />
-            </th>
+            <tr>
+              <th />
+              <th />
+              <th>Título</th>
+              <th>Artista</th>
+              <th>Álbum</th>
+              <th>
+                <img src={ClockIcon} alt="Duração" />
+              </th>
+            </tr>
           </thead>
 
           <tbody>

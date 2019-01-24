@@ -22,15 +22,11 @@ import PlayAndPauseButton from "../PlayAndPauseButton";
 import VolumeIcon from "../../assets/images/volume.svg";
 import ShuffleIcon from "../../assets/images/shuffle.svg";
 import BackwardIcon from "../../assets/images/backward.svg";
-import PlayIcon from "../../assets/images/play.svg";
-import PauseIcon from "../../assets/images/pause.svg";
 import ForwardIcon from "../../assets/images/forward.svg";
 import RepeatIcon from "../../assets/images/repeat.svg";
 
 const Player = ({
   player,
-  play,
-  pause,
   next,
   prev,
   playing,
@@ -125,17 +121,17 @@ Player.propTypes = {
       file: PropTypes.string
     }),
     status: PropTypes.string
-  }).isRequired,
+  }),
   play: PropTypes.func.isRequired,
   pause: PropTypes.func.isRequired,
   next: PropTypes.func.isRequired,
   prev: PropTypes.func.isRequired,
   playing: PropTypes.func.isRequired,
-  position: PropTypes.string.isRequired,
-  duration: PropTypes.string.isRequired,
+  position: PropTypes.string,
+  duration: PropTypes.string,
   handlePosition: PropTypes.func.isRequired,
   setPosition: PropTypes.func.isRequired,
-  positionShown: PropTypes.string.isRequired,
+  positionShown: PropTypes.string,
   progress: PropTypes.number.isRequired,
   setVolume: PropTypes.func.isRequired
 };
